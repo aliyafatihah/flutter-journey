@@ -12,11 +12,11 @@ class CounterPage extends StatelessWidget {
       create: (context) => CounterCubit(0),
       child: BlocListener<CounterCubit, int>(
           listener: (context, state) => {
-                if (state == 3)
+                if (state == 10)
                   showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                            title: Text("Counter reached 3"),
+                            title: Text("Counter reached 10"),
                           ))
               },
           child: CounterView()),
